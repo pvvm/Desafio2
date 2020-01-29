@@ -1,0 +1,70 @@
+@import "https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico";
+@import "https://fonts.googleapis.com/css?family=Roboto&display=swap";
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body {
+    background: #180b1a;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    padding: 30px;
+    border:5px solid rgb(0, 0, 0);
+    background:rgb(108, 54, 160);
+}
+
+.links {
+    text-align: center;
+}
+.links a{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin: 0 50px;
+    text-decoration: none;
+}
+
+.links a:hover{
+    color:white;
+    transition: color 700ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 50px;
+}
+
+#wrapper img {
+    border-radius: 300px;   /*Arredonda a borda da imagem*/
+    border: 7px solid #430985;
+    height: 300px;
+}
+
+#wrapper h1 {
+    font-size: 50px;
+    color: rgb(130, 81, 194);
+    padding: 10px;
+}
+
+#wrapper h2 {
+    margin-top: 5px;
+    font-size: 23px;
+    color: rgba(122, 51, 168, 0.849);
+    opacity: 0.6;
+}
+
+#wrapper ul {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgba(141, 34, 141, 0.514);
+    list-style-type: none;
+}
+
+#redessociais a {
+    /*border-bottom: 2px solid purple;*/
+    padding-bottom: 20px;
+    font-size: 20px;
+}
