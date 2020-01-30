@@ -1,0 +1,158 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700&display=swap';
+
+:root {
+    --color-green: rgb(125, 199, 41);
+    --color-rocket: #715649;
+}
+
+
+* {     /*zerar valores do próprio navegador*/
+    margin:0;
+    padding:0;
+    border:0;
+}
+body {
+    background: rgb(35, 45, 100);
+    color: var(--color-green);
+    font-family: 'Lato', sans-serif;
+}
+header{
+    /*background-color: royalblue;*/
+    padding: 32px;
+    border-bottom: 1px solid rgb(126, 150, 38);
+    background: rgba(216, 81, 81, 0.644)
+}
+
+.links { /*cascata*/
+    text-align: center;
+}
+
+.links a {                  /*. pra referenciar uma classe*/
+    color: white;       /*pinta de branco o texto*/
+    font-size: 18px;      /*muda o tamanho da fonte*/
+    line-height: 28px;    /*altera a altura que o texto está*/
+    margin: 0 16px;       /*margem de cada palavra a (16px pros lados)*/
+    text-decoration: none;      /*retira underline (já que é link)*/
+}
+
+.links a:hover{     /*altera o botão de link ao passar o mouse*/
+    color: #50fa7b;
+    transition: color 700ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px; /*padding é espaçamento*/
+}
+
+#wrapper img {
+    border-radius: 900px;
+    border: 5px solid #349240;
+    margin-bottom: 32px;
+    height: 300px;
+}
+
+#wrapper h1 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+#wrapper h2 {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+#wrapper p {
+    max-width: 300px;
+    margin: 5px auto;     /*faz o texto ficar centralizado automaticamente*/
+    font-size: 20px;
+    line-height: 34px;
+}
+
+#links-footer a{
+    /*text-decoration: underline;*/
+    border-bottom: 1px solid var(--color-green);
+}
+
+/*====CARDS====*/
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*3 colunas*/
+    gap: 20px;
+}
+
+.card {
+    background-color: #120324;
+}
+
+.card__image-container img{
+    width: 100%;
+    filter:grayscale();
+}
+
+.card__content,
+.card__info {
+    padding: 24px;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Deixa com 2 colunas (fr -> flexivel em tamnho)*/
+}
+
+.card__price {
+    background-color: var(--color-rocket);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/*===MODAL===*/
+
+.modal-overlay {
+    background-color: rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative; /*fica relativo, de forma que o close-modal respeite-o*/
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer; /*faz o mouse virar mãozinha ao passar*/
+}
+
+/*===MODAL.ACTIVE===*/
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height:90%;
+    position: absolute;
+    top: 5%;
+}
